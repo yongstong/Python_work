@@ -42,6 +42,6 @@ if __name__ == "__main__":
 					# 如果存在匹配得字符串，那么将当前得run替换成合并后得字符串
 					run.text = run.text.replace('{选项D}', str(celld.value))
 					i += 1
-
 				if i == 5: break
+			if i == 5: break
 	doc.save('shijuan.docx')
