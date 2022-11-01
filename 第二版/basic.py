@@ -14,13 +14,14 @@ from docx.shared import Pt
 ....改题
     
 """
+def asd():
+    print("asd")  
 def choic(begin,num):
     choice_num = input("选择题数目：\n")
     choice_each_score = input("每题分数：\n")
     for i in range(int(begin),int(begin)+int(num)):
         choice_fill(choice_num,choice_each_score,i)
         choice_replace(i,choice_num)
-    return 0
 
 def choice_fill(choice_num,choice_each_score,dox_name):
     doc = Document('2019-2020（B2）试卷.docx')
@@ -51,35 +52,36 @@ def choice_replace(dox_name,num):
         cellb = sheet.cell(row=j, column=6)
         cellc = sheet.cell(row=j, column=7)
         celld = sheet.cell(row=j, column=8)
-        i = 0
+        sign = 0
         for paragraph in doc.paragraphs:
             for run in paragraph.runs:
                 if '(题目)' in run.text:
 					# 如果存在匹配得字符串，那么将当前得run替换成合并后得字符串
                     run.text = run.text.replace('(题目)', str(cell1.value))
-                    i += 1
+                    sign += 1
 
-                elif '(选项A)' in run.text:
+                if '(选项A)' in run.text:
 					# 如果存在匹配得字符串，那么将当前得run替换成合并后得字符串
                     run.text = run.text.replace('(选项A)', str(cella.value))
-                    i += 1
+                    sign += 1
 
-                elif '(选项B)' in run.text:
+                if '(选项B)' in run.text:
 					# 如果存在匹配得字符串，那么将当前得run替换成合并后得字符串
                     run.text = run.text.replace('(选项B)', str(cellb.value))
-                    i += 1
+                    sign += 1
 
-                elif '(选项C)' in run.text:
+                if '(选项C)' in run.text:
 					# 如果存在匹配得字符串，那么将当前得run替换成合并后得字符串
                     run.text = run.text.replace('(选项C)', str(cellc.value))
-                    i += 1
+                    sign += 1
 
-                elif '(选项D)' in run.text:
+                if '(选项D)' in run.text:
 					# 如果存在匹配得字符串，那么将当前得run替换成合并后得字符串
                     run.text = run.text.replace('(选项D)', str(celld.value))
-                    i += 1
-                if i == 5: break
-            if i == 5: break
+                    sign += 1
+                if sign == 5:
+                    break
+            if sign == 1: break
     doc.save(f'{dox_name}.docx')
 
 
