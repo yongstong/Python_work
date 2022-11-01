@@ -27,7 +27,7 @@
      <string>生成</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -61,7 +61,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="xuanzetishuliang_5"/>
+        <widget class="QSpinBox" name="shijuanfenshu">
+         <property name="maximum">
+          <number>10000</number>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -75,7 +79,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="xuanzetishuliang_6"/>
+        <widget class="QSpinBox" name="qishixuehao">
+         <property name="maximum">
+          <number>100000000</number>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -173,7 +181,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="xuanzetishuliang_2"/>
+        <widget class="QSpinBox" name="tiankongtishuliang"/>
        </item>
        <item>
         <widget class="QLabel" name="label_9">
@@ -190,7 +198,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="xuanzetifenshu_2"/>
+        <widget class="QSpinBox" name="tiankongtifenshu"/>
        </item>
        <item>
         <widget class="QLabel" name="label_11">
@@ -234,7 +242,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="xuanzetishuliang_4"/>
+        <widget class="QSpinBox" name="jisuantishuliang"/>
        </item>
        <item>
         <widget class="QLabel" name="label_19">
@@ -251,7 +259,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="xuanzetifenshu_4"/>
+        <widget class="QSpinBox" name="jisuantifenshu"/>
        </item>
        <item>
         <widget class="QLabel" name="label_21">
@@ -295,7 +303,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="xuanzetishuliang_3"/>
+        <widget class="QSpinBox" name="jiedatishuliang"/>
        </item>
        <item>
         <widget class="QLabel" name="label_3">
@@ -312,7 +320,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="xuanzetifenshu_3"/>
+        <widget class="QSpinBox" name="jiedatifenshu"/>
        </item>
        <item>
         <widget class="QLabel" name="label_4">
@@ -332,7 +340,7 @@
      <x>0</x>
      <y>0</y>
      <width>700</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>

@@ -15,11 +15,7 @@ from docx.shared import Pt
     
 """
 
-def choic(choice_num,choice_each_score):
-    begin = 2021 #input("起始学号：")
-    num = 5 #input("人数：")
-     # input("选择题数目：\n")
-    #input("每题分数：\n")
+def choic(choice_num,choice_each_score,begin,num):
     for i in range(int(begin),int(begin)+int(num)):
         choice_fill(choice_num,choice_each_score,i)
         choice_replace(i,choice_num)
